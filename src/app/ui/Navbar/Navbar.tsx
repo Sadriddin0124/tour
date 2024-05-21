@@ -53,7 +53,7 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
     });
   };
   return (
-    <nav className="sm:px-[50px] px-[10px] py-[5px] bg-violet-600 text-white flex w-[100%] justify-between items-center">
+    <nav className="sm:px-[50px] px-[10px] py-[5px] bg-violet-600 text-white flex w-[100%] justify-between items-center fixed z-50">
       <Image
         src={Nav_logo}
         alt="logo"
@@ -87,10 +87,10 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
         <FaBars size={24} onClick={()=>setBar(!bar)}/>
       </button>
       <aside className={`${bar ? "block" : "hidden"} w-[90%] min-h-[300px] bg-slate-300 fixed top-[70px] left-[5%] z-30 rounded-b-[23px]`}>
-        <ul className="flex flex-col items-center text-black gap-[20px] p-[20px] justify-center">
+        <ul className="flex flex-col items-center text-black gap-[15px] p-[20px] justify-center">
           {navLink?.map((item, index) => {
             return (
-              <li key={index} className="hover:text-[silver] border-b w-[100%] text-center">
+              <li key={index} className="hover:text-[silver] border-b pb-[10px] w-[100%] text-center">
                 <Link href={"#" + item?.id}>{item?.title}</Link>
               </li>
             );
@@ -100,7 +100,7 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
               <li
                 onClick={() => SwitchLang(item?.value)}
                 key={index}
-                className="hover:text-[silver]  border-b w-[100%] text-center"
+                className="hover:text-[silver] pb-[10px] flex items-center justify-center border-b w-[100%] text-center"
               >
                 <Link href={item?.value}>{item?.title}</Link>
               </li>
@@ -108,6 +108,7 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
           })}
         </ul>
       </aside>
+        {/* <div className="fixed w-[100%] top-0 h-[100vh] bg-red-300 z-50"></div> */}
     </nav>
   );
 };
