@@ -53,13 +53,13 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
     });
   };
   return (
-    <nav className="px-[50px] py-[5px] bg-violet-600 text-white flex w-[100%] justify-between items-center">
+    <nav className="sm:px-[50px] px-[10px] py-[5px] bg-violet-600 text-white flex w-[100%] justify-between items-center">
       <Image
         src={Nav_logo}
         alt="logo"
         width={60}
         height={60}
-        className="ml-[20px] sm:ml-[100px]"
+        className="sm:ml-[100px]"
       />
       <ul className="hidden lg:flex gap-[40px]">
         {navLink?.map((item, index) => {

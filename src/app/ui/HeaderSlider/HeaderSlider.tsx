@@ -54,7 +54,7 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
               >
                 {item?.go_button}
               </Link>
-              <div className="md:px-[60px] px-[30px] py-[30px] bg-white w-[80%] rounded-full flex items-center justify-between mt-[20px]">
+              <div className="md:px-[60px] px-[30px] py-[30px] bg-white w-[90%] md:w-[80%] rounded-[23px] gap-[5px] flex items-center justify-between flex-wrap mt-[20px]">
                 <div className="flex justify-center items-center gap-[20px]">
                     <div className="w-[60px] h-[60px] border border-[#7C3AED] rounded-full flex justify-center items-center text-violet-600">
                         <FaUser size={24}/>

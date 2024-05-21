@@ -13,7 +13,7 @@ const Locations = ({
 }) => {
   const [activeImage, setActiveImage] = useState(1);
   return (
-    <div className="w-[100%] p-[40px] flex justify-center items-center flex-col gap-[20px]">
+    <div className="w-[100%] px-[10px] py-[40px] sm:px-[40px] flex justify-center items-center flex-col gap-[20px]">
       <h1 className="text-[30px] font-[700]">{Locations?.title}</h1>
       <p className="text-[16px] text-gray-500 max-w-[700px] text-center">
         {Locations?.subtitle}
