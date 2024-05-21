@@ -8,6 +8,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { FaBars } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 interface NavLink {
   home: string;
@@ -84,13 +85,14 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
         })}
       </ul>
       <button className="md:hidden">
-        <FaBars size={24} onClick={()=>setBar(!bar)}/>
+        <FaBars className={bar ? "hidden" : "block"} size={24} onClick={()=>setBar(!bar)}/>
+        <IoClose className={bar ? "block" : "hidden"}  size={28} onClick={()=>setBar(!bar)}/>
       </button>
       <aside className={`${bar ? "block" : "hidden"} w-[90%] min-h-[300px] bg-slate-300 fixed top-[70px] left-[5%] z-30 rounded-b-[23px]`}>
         <ul className="flex flex-col items-center text-black gap-[15px] p-[20px] justify-center">
           {navLink?.map((item, index) => {
             return (
-              <li key={index} className="hover:text-[silver] border-b pb-[10px] w-[100%] text-center">
+              <li key={index} className="hover:text-[silver] border-b pb-[10px] w-[100%] text-center" onClick={()=>setBar(!bar)}>
                 <Link href={"#" + item?.id}>{item?.title}</Link>
               </li>
             );
@@ -102,7 +104,7 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
                 key={index}
                 className="hover:text-[silver] pb-[10px] flex items-center justify-center border-b w-[100%] text-center"
               >
-                <Link href={item?.value}>{item?.title}</Link>
+                <Link href={item?.value} onClick={()=>setBar(!bar)}>{item?.title}</Link>
               </li>
             );
           })}

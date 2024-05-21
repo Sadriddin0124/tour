@@ -24,11 +24,11 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
         interval: 3000,
         speed: 600,
       }}
-      style={{ height: "92vh", width: "100vw" }}
+      style={{ height: "100vh", width: "100vw" }}
     >
       {data?.map((item, index) => {
         return (
-          <SplideSlide className="h-[92vh]" key={index}>
+          <SplideSlide className="h-[100vh]" key={index}>
             <Image
               width={1000}
               height={600}
