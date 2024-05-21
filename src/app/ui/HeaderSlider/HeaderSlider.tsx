@@ -50,7 +50,7 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
               </h1>
               <Link
                 href="#contacts"
-                className="px-[30px] py-[12px] bg-violet-600 rounded-full text-white text-[14px] font-[500]"
+                className="px-[30px] py-[12px] bg-violet-600 rounded-full text-white text-[14px] font-[500] hover:bg-white hover:text-violet-600 transition-all"
               >
                 {item?.go_button}
               </Link>

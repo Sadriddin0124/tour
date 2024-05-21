@@ -6,7 +6,6 @@ import { FaCarRear } from "react-icons/fa6";
 import { FaPlane } from "react-icons/fa";
 import { FaBuilding } from "react-icons/fa6";
 import Slider from 'react-slick';
-// import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const CardSlider = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers: {title: string; subtitle: string} }) => {
