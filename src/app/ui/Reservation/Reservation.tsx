@@ -11,7 +11,7 @@ const Reservation = ({
       <div className="w-[90%] sm:w-[80%] p-[50px] flex flex-col items-center bg-gray-100 gap-[20px] rounded-b-[23px]">
         <h1 className="text-[30px] font-[700]">{ReservationData?.title}</h1>
         <form className="w-[100%] flex justify-center flex-col items-center gap-[30px]">
-          <div className=" flex gap-[20px] w-[100%]">
+          <div className=" flex gap-[20px] w-[100%] flex-col md:flex-row">
             <div className="flex flex-col gap-[5px] w-[100%]">
               <label className="text-[16px] text-gray-400">
                 {ReservationData?.name}
@@ -33,7 +33,7 @@ const Reservation = ({
               />
             </div>
           </div>
-          <div className=" flex gap-[20px] w-[100%]">
+          <div className=" flex gap-[20px] w-[100%] flex-col md:flex-row">
             <div className="flex flex-col gap-[5px] w-[100%]">
               <label className="text-[16px] text-gray-400">
                 {ReservationData?.guests}

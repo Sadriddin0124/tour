@@ -6,7 +6,7 @@ const Footer = ({FooterData}: {FooterData: FooterType}) => {
   return (
     <div className='relative flex flex-col w-[100%]'>
       <Image src={FooterImage} alt='Footer' width={1000} height={1000} className='w-[100%] h-[232px] object-cover absolute'/>
-      <div className='absolute w-[100%] h-[232px] bg-gradient-to-l from-violet-600 to-violet-600 opacity-80 p-[20px] flex justify-evenly items-center'>
+      <div className='absolute w-[100%] h-[232px] bg-gradient-to-l from-violet-600 to-violet-600 opacity-80 p-[20px] flex justify-evenly items-center flex-col sm:flex-row'>
         <div className='flex flex-col'>
             <h1 className='text-[24px] sm:text-[40px] font-[700] text-white'>{FooterData?.title}</h1>
             <p className='text-white text-[20px] font-[600]'>{FooterData?.subtitle}</p>
