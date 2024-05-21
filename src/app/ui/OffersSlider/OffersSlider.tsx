@@ -34,7 +34,7 @@ const CardSlider = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers:
     ],
   };
   return (
-    <div className="py-[50px] flex flex-col items-center gap-[20px] bg-white">
+    <div id="tours" className="py-[50px] flex flex-col items-center gap-[20px] bg-white" >
       <h1 className="text-[30px] font-[700]">{Offers?.title}</h1>
       <p className="text-[16px] text-gray-500 max-w-[700px] text-center">{Offers?.subtitle}</p>
       <div className="py-[20px] w-[100%] px-[30px] h-[80vh]  bg-white overflow-hidden">

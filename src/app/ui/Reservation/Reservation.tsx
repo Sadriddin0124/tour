@@ -8,7 +8,7 @@ const Reservation = ({
 }) => {
   return (
     <div className="w-[100%] flex justify-center pb-[50px]">
-      <div className="w-[80%] p-[50px] flex flex-col items-center bg-gray-100 gap-[20px] rounded-b-[23px]">
+      <div className="w-[90%] sm:w-[80%] p-[50px] flex flex-col items-center bg-gray-100 gap-[20px] rounded-b-[23px]">
         <h1 className="text-[30px] font-[700]">{ReservationData?.title}</h1>
         <form className="w-[100%] flex justify-center flex-col items-center gap-[30px]">
           <div className=" flex gap-[20px] w-[100%]">

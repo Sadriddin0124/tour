@@ -8,7 +8,7 @@ const Footer = ({FooterData}: {FooterData: FooterType}) => {
       <Image src={FooterImage} alt='Footer' width={1000} height={1000} className='w-[100%] h-[232px] object-cover absolute'/>
       <div className='absolute w-[100%] h-[232px] bg-gradient-to-l from-violet-600 to-violet-600 opacity-80 p-[20px] flex justify-evenly items-center'>
         <div className='flex flex-col'>
-            <h1 className='text-[40px] font-[700] text-white'>{FooterData?.title}</h1>
+            <h1 className='text-[24px] sm:text-[40px] font-[700] text-white'>{FooterData?.title}</h1>
             <p className='text-white text-[20px] font-[600]'>{FooterData?.subtitle}</p>
         </div>
         <button className='py-[12px] px-[30px] bg-violet-600 rounded-full text-[14px] text-white border border-[#fff] hover:text-violet-600 hover:bg-white'>{FooterData?.btn}</button>

@@ -16,6 +16,7 @@ interface NavLink {
   contacts: string;
 }
 const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
+  const [bar, setBar] = useState<boolean>(false)
   const [navLink, setNavLink] = useState([
     {
       id: "home",
@@ -82,14 +83,14 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
           );
         })}
       </ul>
-      <button>
-        <FaBars size={24} />
+      <button className="md:hidden">
+        <FaBars size={24} onClick={()=>setBar(!bar)}/>
       </button>
-      <aside className="w-[90%] min-h-[300px] bg-white fixed top-[70px] left-[5%] z-30 rounded-b-[23px]">
-        <ul className="flex flex-col items-center text-black">
+      <aside className={`${bar ? "block" : "hidden"} w-[90%] min-h-[300px] bg-slate-300 fixed top-[70px] left-[5%] z-30 rounded-b-[23px]`}>
+        <ul className="flex flex-col items-center text-black gap-[20px] p-[20px] justify-center">
           {navLink?.map((item, index) => {
             return (
-              <li key={index} className="hover:text-[silver]">
+              <li key={index} className="hover:text-[silver] border-b w-[100%] text-center">
                 <Link href={"#" + item?.id}>{item?.title}</Link>
               </li>
             );
@@ -99,7 +100,7 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
               <li
                 onClick={() => SwitchLang(item?.value)}
                 key={index}
-                className="hover:text-[silver]"
+                className="hover:text-[silver]  border-b w-[100%] text-center"
               >
                 <Link href={item?.value}>{item?.title}</Link>
               </li>

@@ -9,14 +9,14 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Countries = ({CountriesData, Countries}: {CountriesData: CountriesType[], Countries: {title: string; subtitle: string}}) => {
   return (
-    <div className='w-[100%] flex flex-col items-start px-[100px] py-[30px] gap-[30px]' >
+    <div className='w-[100%] flex flex-col items-start px-[20px] lg:px-[100px] py-[30px] gap-[30px]' >
       <h1 className="text-[30px] font-[700]">{Countries?.title}</h1>
       <p className="text-[16px] text-gray-400 max-w-[500px] text-start">{Countries?.subtitle}</p>
       <div className='w-[100%]'>
         {
             CountriesData?.map((item,index)=> {
-                return <div key={index} className='w-[80%] flex gap-[20px] py-[40px] items-start'>
-                    <Image src={item?.img} alt={item?.title} width={300} height={200} className='rounded-[23px]'/>
+                return <div key={index} className='w-[100%] xl:w-[80%] flex gap-[20px] py-[40px] items-start flex-col md:flex-row'>
+                    <Image src={item?.img} alt={item?.title} width={300} height={200} className='rounded-[23px] w-[100%] md:w-[300px]'/>
                     <div className='flex flex-col justify-between pb-[15px]'>
                         <div className='flex w-[100%] justify-between'>
                             <div>
