@@ -39,12 +39,12 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
     {
       value: "",
       title: (
-        <div className="bg-white p-[2px] rounded-sm text-violet-600">
+        <div className="bg-violet-600 md:bg-white hover:bg-gray-500 p-[2px] rounded-sm text-white md:text-violet-600">
           <BiLogoTelegram size={14} />
         </div>
       ),
     },
-    { value: "", title: <IoLogoInstagram size={20} className="text-white" /> },
+    { value: "", title: <IoLogoInstagram size={20} className="text-violet-600 hover:text-gray-500 md:text-white" /> },
   ]);
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -84,11 +84,11 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
           );
         })}
       </ul>
-      <button className="md:hidden">
+      <button className="lg:hidden">
         <FaBars className={bar ? "hidden" : "block"} size={24} onClick={()=>setBar(!bar)}/>
         <IoClose className={bar ? "block" : "hidden"}  size={28} onClick={()=>setBar(!bar)}/>
       </button>
-      <aside className={`${bar ? "block" : "hidden"} w-[90%] min-h-[300px] bg-slate-300 fixed top-[70px] left-[5%] z-30 rounded-b-[23px]`}>
+      <aside className={`${bar ? "block" : "hidden"} w-[90%] min-h-[300px] bg-slate-100 fixed top-[70px] left-[5%] z-30 rounded-b-[23px]`}>
         <ul className="flex flex-col items-center text-black gap-[15px] p-[20px] justify-center">
           {navLink?.map((item, index) => {
             return (
@@ -110,7 +110,6 @@ const Navbar = ({ navLinkItem }: { navLinkItem: NavLink }) => {
           })}
         </ul>
       </aside>
-        {/* <div className="fixed w-[100%] top-0 h-[100vh] bg-red-300 z-50"></div> */}
     </nav>
   );
 };

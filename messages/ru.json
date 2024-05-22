@@ -224,6 +224,38 @@
     "contact3": {
       "title": "Посетите наши офисы",
       "desc": "15/25, Чиланзар - 9, город Ташкент"
+    },
+    "reservation": {
+      "title": "Оформите ваше бронирование через эту форму",
+      "name": "Ваше имя",
+      "phone": "Ваш номер телефона",
+      "guests": "Количество гостей",
+      "date": "Дата заезда",
+      "destination": "Выберите ваш пункт назначения",
+      "visa": "Выберите свою визовую поддержку  ",
+      "btn": "Забронировать сейчас",
+      "city1": "Анталья",
+      "city2": "Стамбул",
+      "city3": "Дубай",
+      "city4": "Шарм-эль-Шейх",
+      "city5": "Куала-Лумпур",
+      "city6": "Канада",
+      "city7": "Англия",
+      "country": "Choose Your Country",
+      "country1": "USA",
+      "country2": "Europe",
+      "country3": "England",
+      "country4": "Japan",
+      "country5": "Oman",
+      "country6": "Saudi Arabia",
+      "country7": "India",
+      "country8": "China"
+    },
+    "footer": {
+      "title": "ИЩИТЕ, КУДА ПОЕХАТЬ?",
+      "subtitle": "Зарезервируйте, кликнув по кнопке",
+      "btn": "Забронировать сейчас",
+      "bottom": "Copyright © 2024 Zamon Business Tour. All rights reserved."
     }
   }
 }

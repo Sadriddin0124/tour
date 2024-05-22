@@ -134,42 +134,42 @@ export default function Home() {
       desc3: t("offers3.desc3"),
       button: t("offers3.button"),
     },
-    // {
-    //   img: Sharm3,
-    //   city: t("offers3.city"),
-    //   price: t("offers3.price"),
-    //   subtitle1: t("offers3.subtitle1"),
-    //   subtitle2: t("offers3.subtitle2"),
-    //   desc_title: t("offers3.desc_title"),
-    //   desc1: t("offers3.desc1"),
-    //   desc2: t("offers3.desc2"),
-    //   desc3: t("offers3.desc3"),
-    //   button: t("offers3.button")
-    // },
-    // {
-    //   img: USA,
-    //   city: t("offers3.city"),
-    //   price: t("offers3.price"),
-    //   subtitle1: t("offers3.subtitle1"),
-    //   subtitle2: t("offers3.subtitle2"),
-    //   desc_title: t("offers3.desc_title"),
-    //   desc1: t("offers3.desc1"),
-    //   desc2: t("offers3.desc2"),
-    //   desc3: t("offers3.desc3"),
-    //   button: t("offers3.button")
-    // },
-    // {
-    //   img: Canada,
-    //   city: t("offers3.city"),
-    //   price: t("offers3.price"),
-    //   subtitle1: t("offers3.subtitle1"),
-    //   subtitle2: t("offers3.subtitle2"),
-    //   desc_title: t("offers3.desc_title"),
-    //   desc1: t("offers3.desc1"),
-    //   desc2: t("offers3.desc2"),
-    //   desc3: t("offers3.desc3"),
-    //   button: t("offers3.button")
-    // },
+    {
+      img: Sharm3,
+      city: t("offers3.city"),
+      price: t("offers3.price"),
+      subtitle1: t("offers3.subtitle1"),
+      subtitle2: t("offers3.subtitle2"),
+      desc_title: t("offers3.desc_title"),
+      desc1: t("offers3.desc1"),
+      desc2: t("offers3.desc2"),
+      desc3: t("offers3.desc3"),
+      button: t("offers3.button")
+    },
+    {
+      img: USA,
+      city: t("offers3.city"),
+      price: t("offers3.price"),
+      subtitle1: t("offers3.subtitle1"),
+      subtitle2: t("offers3.subtitle2"),
+      desc_title: t("offers3.desc_title"),
+      desc1: t("offers3.desc1"),
+      desc2: t("offers3.desc2"),
+      desc3: t("offers3.desc3"),
+      button: t("offers3.button")
+    },
+    {
+      img: Canada,
+      city: t("offers3.city"),
+      price: t("offers3.price"),
+      subtitle1: t("offers3.subtitle1"),
+      subtitle2: t("offers3.subtitle2"),
+      desc_title: t("offers3.desc_title"),
+      desc1: t("offers3.desc1"),
+      desc2: t("offers3.desc2"),
+      desc3: t("offers3.desc3"),
+      button: t("offers3.button")
+    },
   ];
   const DestinationData = [
     {
@@ -322,23 +322,18 @@ export default function Home() {
     <div>
       <Navbar navLinkItem={navLink} />
       <HeaderSlider data={sliderData} />
-      {/* <Image src={Istanbul} alt="header" width={1000} height={1000} className="w-[100%] h-[100vh]"/> */}
       <CardSlider
         OffersData={OffersData}
         Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
       />
       <CardSlider
-        OffersData={OffersData}
-        Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
-      />
-      {/* <Offers
         OffersData={OffersData}
         Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
       />
       <Support
         OffersData={OffersData}
         Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
-      /> */}
+      /> 
       <Destination
         DestinationData={DestinationData}
         Destination={{

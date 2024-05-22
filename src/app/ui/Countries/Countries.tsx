@@ -18,12 +18,12 @@ const Countries = ({CountriesData, Countries}: {CountriesData: CountriesType[], 
                 return <div key={index} className='w-[100%] xl:w-[80%] flex gap-[20px] py-[40px] items-start flex-col md:flex-row'>
                     <Image src={item?.img} alt={item?.title} width={300} height={200} className='rounded-[23px] w-[100%] md:w-[300px]'/>
                     <div className='flex flex-col justify-between pb-[15px]'>
-                        <div className='flex w-[100%] justify-between'>
+                        <div className='flex w-[100%] justify-between flex-wrap gap-[10px] mb-[20px]'>
                             <div>
                                 <h1 className='text-[20px] font-[700]'>{item?.title}</h1>
                                 <p className='text-[16px] text-gray-400'>{item?.subtitle}</p>
                             </div>
-                            <button className='px-[30px] py-[12px] font-[500] bg-violet-600 text-white text-[14px] rounded-full'>{item?.button}</button>
+                            <button className='px-[30px] whitespace-nowrap py-[12px] font-[500] bg-violet-600 text-white text-[14px] rounded-full'>{item?.button}</button>
                         </div>
                         <p className='text-[16px] text-gray-400 mt-[20px]'>{item?.desc}</p>
                         <div className='w-[100%] flex justify-between py-[15px] border-t mt-[15px] border-b'>

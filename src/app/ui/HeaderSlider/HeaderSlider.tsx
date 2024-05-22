@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import Image from "next/image";
 import Sharm from "../../../assets/sharm.jpg";
@@ -14,7 +13,6 @@ import 'swiper/css';
 
 const HeaderSlider = ({ data }: { data: SliderType[] }) => {
   console.log(data);
-
   return (
     <Swiper
       spaceBetween={0}
@@ -25,10 +23,9 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
       onSwiper={(swiper) => console.log(swiper)}
       className='h-[100vh]'
     >
-      ...
       {data?.map((item, index) => {
         return (
-            <SwiperSlide  className="h-[100vh]" key={index}>
+            <SwiperSlide  className="min-h-[100vh] pt-[70px]" key={index}>
             <Image
               width={1000}
               height={600}
@@ -54,7 +51,7 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
               >
                 {item?.go_button}
               </Link>
-              <div className="md:px-[60px] px-[30px] py-[30px] bg-white w-[90%] md:w-[80%] rounded-[23px] gap-[5px] flex items-center justify-between flex-wrap mt-[20px]">
+              <div className="md:px-[60px] px-[30px] py-[30px] bg-white w-[90%] md:w-[80%] lg:rounded-full rounded-[23px] gap-[5px] flex items-center justify-between flex-wrap mt-[20px]">
                 <div className="flex justify-center items-center gap-[20px]">
                     <div className="w-[60px] h-[60px] border border-[#7C3AED] rounded-full flex justify-center items-center text-violet-600">
                         <FaUser size={24}/>

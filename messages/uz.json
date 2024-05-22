@@ -226,14 +226,36 @@
       "desc": "15/25, Chilanzar - 9, Tashkent city"
     },
     "reservation": {
-      "title": "Make Your Reservation Through This Form",
-      "name": "Your Name",
-      "phone": "Your Phone Number",
-      "guests": "Number Of Guests",
-      "date": "Check In Date",
-      "destinantion": "Choose Your Destination",
-      "visa": "Choose Your Visa Support",
-      "btn": "Make Your Reservation Now"
+      "title": "O'z joyingizni band qiling",
+      "name": "Ismingiz",
+      "phone": "Telefon raqamingiz",
+      "guests": "Necha kishisiz",
+      "date": "Uchish sanasi",
+      "destination": "Manzilingizni tanlang",
+      "visa": "Visa turini tanlangt",
+      "btn": "Band Qilish",
+      "city1": "Antalya",
+      "city2": "Istanbul",
+      "city3": "Dubai",
+      "city4": "Sharm El-Sheikh",
+      "city5": "Kuala Lumpur",
+      "city6": "Canada",
+      "city7": "England",
+      "country": "Choose Your Country",
+      "country1": "USA",
+      "country2": "Europe",
+      "country3": "England",
+      "country4": "Japan",
+      "country5": "Oman",
+      "country6": "Saudi Arabia",
+      "country7": "India",
+      "country8": "China"
+    },
+    "footer": {
+      "title": "SAYOHAT QILISHNI XOHLAYSIZMI?",
+      "subtitle": "Unda biz bilan hoziroq bog'laning",
+      "btn": "Bog'lanish",
+      "bottom": "Copyright © 2024 Zamon Business Tour. All rights reserved."
     }
   }
 }

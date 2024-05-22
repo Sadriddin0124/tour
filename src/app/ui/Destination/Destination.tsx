@@ -13,7 +13,7 @@ const Destination = ({DestinationData, Destination}: {DestinationData: Destinati
                 return <div key={index} className='w-[100%] xl:w-[80%] flex gap-[20px] py-[40px] border-b items-start md:flex-row flex-col'>
                     <Image src={item?.img} alt={item?.title} width={300} height={200} className='rounded-[23px] md:w-[300px] w-[100%]'/>
                     <div className='flex flex-col justify-between'>
-                        <div className='flex w-[100%] justify-between items-start'>
+                        <div className='flex w-[100%] justify-between flex-wrap gap-[10px] mb-[20px] items-start'>
                             <div>
                                 <h1 className='text-[20px] font-[700]'>{item?.title}</h1>
                                 <p className='text-[16px] text-gray-500'>{item?.subtitle}</p>

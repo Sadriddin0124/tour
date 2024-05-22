@@ -28,3 +28,17 @@
 * {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 700px) {
+  .slide__item {
+    width: 70% !important;
+    margin: 0 15% !important;
+  }
+}
+
+@media (max-width: 500px)  {
+  .slide__item {
+    width: 100% !important;
+    margin: 0 50px 0 0 !important;
+  }
+}
