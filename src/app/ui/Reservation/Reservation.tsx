@@ -34,14 +34,18 @@ const Reservation = ({
         chat_id: chatId,
         text: message,
       });
-      console.log(response)
+      if (response?.status === 200) {
+        setActive(true)
+        setTimeout(() => {
+          window.location.reload()
+        }, 1000);
+      }
     } catch (error) {
       console.log(error);
       
     }
   };
-  const id = process.env.TELEGRAM_CHAT_ID
-  console.log(id);
+  const [active,setActive] = useState(false)
   return (
     <div className="w-[100%] flex justify-center pb-[50px]">
       <div className="w-[90%] sm:w-[80%] p-[20px] sm:p-[50px] flex flex-col items-center bg-gray-100 gap-[20px] rounded-b-[23px]">
@@ -53,6 +57,7 @@ const Reservation = ({
                 {ReservationData?.name}
               </label>
               <input
+              required
                 type="text"
                 className="w-[100%] h-[46px] px-[20px] border rounded-full"
                 placeholder="Ex. John Smith"
@@ -64,6 +69,7 @@ const Reservation = ({
                 {ReservationData?.phone}
               </label>
               <input
+              required
                 type="text"
                 className="w-[100%] h-[46px] px-[20px] border rounded-full"
                 placeholder="Ex. +99899 999 99 99"
@@ -90,6 +96,7 @@ const Reservation = ({
                 {ReservationData?.date}
               </label>
               <input
+              required
                 type="date"
                 className="w-[100%] h-[46px] px-[20px] border rounded-full text-gray-400"
                 onChange={(e)=>setDate(e.target.value)}
@@ -123,7 +130,8 @@ const Reservation = ({
                     }
                 </select>
             </div>
-            <button type="submit" className="hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] w-[100%] h-[46px] bg-violet-600 rounded-full text-white text-[14px] font-[500]">{ReservationData?.btn}</button>
+            <p className={active ? "block" : "hidden"}>Message Sent</p>
+            <button type="submit" className={`${active ? "hidden" : "block"} hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] w-[100%] h-[46px] bg-violet-600 rounded-full text-white text-[14px] font-[500]`}>{ReservationData?.btn}</button>
         </form>
       </div>
     </div>

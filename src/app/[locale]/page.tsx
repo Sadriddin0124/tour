@@ -31,6 +31,8 @@ import Map from "../ui/Map/Map";
 import Reservation from "../ui/Reservation/Reservation";
 import Footer from "../ui/Footer/Footer";
 import OffersSlider from "../ui/OffersSlider/OffersSlider";
+import Loading from "../ui/loading/loading";
+import { useState } from "react";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -315,7 +317,6 @@ export default function Home() {
     btn: t("footer.btn"),
     bottom: t("footer.bottom"),
   };
-
   
   return (
     <div>
