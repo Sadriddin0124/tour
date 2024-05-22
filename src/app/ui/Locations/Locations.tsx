@@ -30,8 +30,12 @@ const Locations = ({
       let width = screenSizeRef.current.width
       setWidth(width)
     }
-    handleResize()
-  }, []);
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [width]);
   return (
     <div className="w-[100%] px-[10px] py-[40px] sm:px-[40px] flex justify-center items-center flex-col gap-[20px]">
       <h1 className="text-[30px] font-[700]">{Locations?.title}</h1>
@@ -72,8 +76,8 @@ const Locations = ({
           <div
             key={index}
             className={`${
-              activeImage === item?.id ? "w-[200px] md:w-[400px]" : "w-[60px]"
-            } transition-all cursor-pointer h-[400px] bg-slate-500 rounded-[30px] overflow-hidden relative`}
+              activeImage === item?.id ? "w-[160px] ms:w-[220px] md:w-[400px]" : "w-[60px]"
+            } transition-all cursor-pointer h-[400px] bg-slate-500 rounded-[15px] md:rounded-[30px] overflow-hidden relative`}
             onClick={()=>setActiveImage(item?.id)}
           >
             <Image
@@ -81,7 +85,7 @@ const Locations = ({
               alt={item?.name}
               width={1000}
               height={1000}
-              className="w-[100%] h-[100%] object-cover"
+              className={`${activeImage === item?.id ? " scale-100" : "scale-110"} w-[100%] h-[100%] object-cover`}
             />
             <div className={`${activeImage === item?.id ? "bottom-[15px] left-[15px]" : " bottom-[10px] left-[10px]"} transition-all absolute flex gap-[10px]`}>
               <button className=" w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center" onClick={()=>setActiveImage(item?.id)}>
