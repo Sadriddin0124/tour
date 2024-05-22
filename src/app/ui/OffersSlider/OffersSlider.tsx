@@ -19,25 +19,12 @@ const OffersSlider = ({
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  // const [width, setWidth] = useState(0);
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     screenSizeRef.current = {
-  //       width: window.innerWidth,
-  //       height: window.innerHeight,
-  //     };
-  //     let width = screenSizeRef.current.width;
-  //     setWidth(width);
-  //   };
-  //   handleResize();
-  // }, []);
   const SlideChange = () => {
     screenSizeRef.current = {
       width: window.innerWidth,
       height: window.innerHeight,
     };
     let width = screenSizeRef.current.width;
-    // setWidth(width);
     width < 1200 && width > 800
       ? setSlideNum(2)
       : width < 800
@@ -54,7 +41,7 @@ const OffersSlider = ({
         {Offers?.subtitle}
       </p>
       <Swiper
-        spaceBetween={0}
+        spaceBetween={1}
         loop={true}
         slidesPerView={slideNum}
         autoplay={true}
@@ -107,7 +94,7 @@ const OffersSlider = ({
                     <FaBuilding />
                     {item?.desc3}
                   </p>
-                  <button className="w-[100%] px-[30px] py-[12px] text-[14px] bg-violet-600 text-white rounded-full mt-[25px]">
+                  <button className="hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] w-[100%] px-[30px] py-[12px] text-[14px] bg-violet-600 text-white rounded-full mt-[25px]">
                     {item?.button}
                   </button>
                 </div>

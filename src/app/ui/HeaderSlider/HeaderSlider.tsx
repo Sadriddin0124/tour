@@ -79,7 +79,7 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
                         <h1 className="text-[20px] font-[700] text-violet-600">{item?.cost_num}</h1>
                     </div>
                 </div>
-                <Link href={""} className="px-[30px] py-[12px] bg-violet-600 rounded-full text-white text-[14px] font-[500]">{item?.learn_more}</Link>
+                <Link href={""} className="hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] px-[30px] py-[12px] bg-violet-600 rounded-full text-white text-[14px] font-[500]">{item?.learn_more}</Link>
               </div>
             </div>
 

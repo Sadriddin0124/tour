@@ -6,7 +6,6 @@ import Sharm from "../../assets/sharm.jpg";
 import Dubai from "../../assets/dubai.jpg";
 import Istanbul from "../../assets/istanbul.jpg";
 import Antalia from "../../assets/antalia.jpg";
-import Offers from "../ui/Offers/Offers";
 import Istanbul2 from "@/assets/istanbul2.jpg";
 import Support from "../ui/Support/Support";
 import Destination from "../ui/Destination/Destination";
@@ -20,7 +19,6 @@ import AirPlane from "@/assets/airplane.jpg";
 import Antalya from "@/assets/antalya.jpg";
 import Sharm2 from "@/assets/sharm2.jpg";
 import Istanbul3 from "@/assets/istanbul3.jpg";
-import Dubai3 from "@/assets/dubai3.jpg";
 import Antalya2 from "@/assets/Antalya2.jpg";
 import Sharm3 from "@/assets/sharm3.jpg";
 import USA from "@/assets/USA.jpg";
@@ -32,8 +30,7 @@ import { FaLocationPin } from "react-icons/fa6";
 import Map from "../ui/Map/Map";
 import Reservation from "../ui/Reservation/Reservation";
 import Footer from "../ui/Footer/Footer";
-import CarouselCard from "../ui/OffersSlider/OffersSlider";
-import CardSlider from "../ui/OffersSlider/OffersSlider";
+import OffersSlider from "../ui/OffersSlider/OffersSlider";
 
 export default function Home() {
   const t = useTranslations("Index");
@@ -318,15 +315,13 @@ export default function Home() {
     btn: t("footer.btn"),
     bottom: t("footer.bottom"),
   };
+
+  
   return (
     <div>
       <Navbar navLinkItem={navLink} />
       <HeaderSlider data={sliderData} />
-      <CardSlider
-        OffersData={OffersData}
-        Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
-      />
-      <CardSlider
+      <OffersSlider
         OffersData={OffersData}
         Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
       />

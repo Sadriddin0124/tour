@@ -18,7 +18,7 @@ const Destination = ({DestinationData, Destination}: {DestinationData: Destinati
                                 <h1 className='text-[20px] font-[700]'>{item?.title}</h1>
                                 <p className='text-[16px] text-gray-500'>{item?.subtitle}</p>
                             </div>
-                            <button className='px-[30px] whitespace-nowrap py-[12px] font-[500] bg-violet-600 text-white text-[14px] rounded-full'>{item?.button}</button>
+                            <button className='hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] px-[30px] whitespace-nowrap py-[12px] font-[500] bg-violet-600 text-white text-[14px] rounded-full'>{item?.button}</button>
                         </div>
                         <p className='text-[16px] text-gray-500'>{item?.desc}</p>
                     </div>

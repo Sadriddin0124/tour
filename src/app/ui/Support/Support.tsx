@@ -88,7 +88,7 @@ const Support = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers: {t
                    <FaBuilding />
                    {item?.desc3}
                  </p>
-                 <button className="w-[100%] px-[30px] py-[12px] text-[14px] bg-violet-600 text-white rounded-full mt-[25px]">
+                 <button className="hover:bg-white hover:text-violet-600 transition-all border border-[rgb(124 58 237)] w-[100%] px-[30px] py-[12px] text-[14px] bg-violet-600 text-white rounded-full mt-[25px]">
                    {item?.button}
                  </button>
                </div>
