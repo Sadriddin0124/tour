@@ -7,28 +7,28 @@ import Sharm from "../../../assets/sharm.jpg";
 import { SliderType } from "@/app/types/slider.types";
 import Link from "next/link";
 import { FaUser } from "react-icons/fa";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGlobe } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
+import 'swiper/css';
 
 const HeaderSlider = ({ data }: { data: SliderType[] }) => {
   console.log(data);
 
   return (
-    <Splide
-      options={{
-        type: "loop",
-        perPage: 1,
-        pagination: true,
-        arrows: true,
-        autoplay: true,
-        interval: 3000,
-        speed: 600,
-      }}
-      style={{ height: "100vh", width: "100vw" }}
+    <Swiper
+      spaceBetween={0}
+      loop={true}
+      slidesPerView={1}
+      autoplay={true}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+      className='h-[100vh]'
     >
+      ...
       {data?.map((item, index) => {
         return (
-          <SplideSlide className="h-[100vh]" key={index}>
+            <SwiperSlide  className="h-[100vh]" key={index}>
             <Image
               width={1000}
               height={600}
@@ -85,11 +85,12 @@ const HeaderSlider = ({ data }: { data: SliderType[] }) => {
                 <Link href={""} className="px-[30px] py-[12px] bg-violet-600 rounded-full text-white text-[14px] font-[500]">{item?.learn_more}</Link>
               </div>
             </div>
-          </SplideSlide>
+
+            </SwiperSlide>
         );
       })}
-    </Splide>
+      </Swiper>
   );
 };
 
-export default HeaderSlider;
+export default HeaderSlider

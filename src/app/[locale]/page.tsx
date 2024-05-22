@@ -321,8 +321,8 @@ export default function Home() {
   return (
     <div>
       <Navbar navLinkItem={navLink} />
-      {/* <HeaderSlider data={sliderData} /> */}
-      <Image src={Istanbul} alt="header" width={1000} height={1000} className="w-[100%] h-[100vh]"/>
+      <HeaderSlider data={sliderData} />
+      {/* <Image src={Istanbul} alt="header" width={1000} height={1000} className="w-[100%] h-[100vh]"/> */}
       <CardSlider
         OffersData={OffersData}
         Offers={{ title: t("offers.title"), subtitle: t("offers.subtitle") }}
