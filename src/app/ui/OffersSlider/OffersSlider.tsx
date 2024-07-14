@@ -8,6 +8,7 @@ import { FaBuilding } from "react-icons/fa6";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
 const OffersSlider = ({
   OffersData,
   Offers,
@@ -41,10 +42,14 @@ const OffersSlider = ({
         {Offers?.subtitle}
       </p>
       <Swiper
+          modules={[Autoplay]}
         spaceBetween={1}
         loop={true}
         slidesPerView={slideNum}
-        autoplay={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         onSlideChange={SlideChange}
         onSwiper={(swiper) => console.log(swiper)}
         navigation={true}

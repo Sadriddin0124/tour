@@ -8,6 +8,7 @@ import { FaBuilding } from "react-icons/fa6";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Autoplay } from "swiper/modules";
 const Support = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers: {title: string; subtitle: string} }) => {
   const screenSizeRef = useRef({
     width: window.innerWidth,
@@ -40,10 +41,14 @@ const Support = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers: {t
       <h1 className="text-[30px] font-[700] w-[100%] text-center">{Offers?.title}</h1>
       <p className="text-[16px] text-gray-500  w-[100%] mt-[30px] text-center">{Offers?.subtitle}</p>
       <Swiper
-      spaceBetween={0}
+      modules={[Autoplay]}
+      spaceBetween={1}
       loop={true}
       slidesPerView={slideNum}
-      autoplay={true}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
       onSlideChange={SlideChange}
       onSwiper={(swiper) => console.log(swiper)}
       navigation={true}
@@ -52,7 +57,6 @@ const Support = ({ OffersData, Offers }: { OffersData: OffersTypes[], Offers: {t
       {OffersData?.map((item, index) => {
         return (
           <SwiperSlide  className="min-h-[100vh] pt-[70px] slide__item" key={index}>
-          
              <div key={index} className="relative w-[320px] sm:w-[360px] min-h-[420px]">
                <Image
                  src={item?.img}

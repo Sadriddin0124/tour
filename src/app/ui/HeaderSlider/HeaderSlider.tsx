@@ -10,15 +10,20 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGlobe } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import 'swiper/css';
+import { Autoplay } from "swiper/modules";
 
 const HeaderSlider = ({ data }: { data: SliderType[] }) => {
   console.log(data);
   return (
     <Swiper
-      spaceBetween={0}
-      loop={true}
-      slidesPerView={1}
-      autoplay={true}
+    modules={[Autoplay]}
+    spaceBetween={0}
+    loop={true}
+    slidesPerView={1}
+    autoplay={{
+      delay: 2000,
+      disableOnInteraction: false,
+    }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       className='h-[100vh]'
